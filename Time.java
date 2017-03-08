@@ -9,11 +9,11 @@ package time;
  */
 public class Time {
 
-		private final static int MAX_HOUR = 24;
-		private final static int MAX_MIN = 60;
-		private final static int MAX_SEC = 60;
+	private final static int MAX_HOUR = 24;
+	private final static int MAX_MIN = 60;
+	private final static int MAX_SEC = 60;
 
-		private int hour   = 0;
+	private int hour   = 0;
     private int minute = 0;
     private int second = 0;
 
