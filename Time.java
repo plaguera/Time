@@ -8,12 +8,12 @@ package time;
  * Time.java
  */
 public class Time {
-	
-	private final static int MAX_HOUR = 24;
-	private final static int MAX_MIN = 60;
-	private final static int MAX_SEC = 60;
-	
-	private int hour   = 0;
+
+		private final static int MAX_HOUR = 24;
+		private final static int MAX_MIN = 60;
+		private final static int MAX_SEC = 60;
+
+		private int hour   = 0;
     private int minute = 0;
     private int second = 0;
 
@@ -31,31 +31,31 @@ public class Time {
     public int getHour() {
         return hour;
     }
-    
+
     /** @return the minute */
     public int getMinute() {
         return minute;
     }
-    
+
     /** @return the second */
     public int getSecond() {
         return second;
     }
-    
+
     /** @param new hour value [0-23] */
     public void setHour(int hour) {
         if (hour < 0 || hour >= MAX_HOUR)
             throw new IllegalArgumentException("Not valid hour value");
         this.hour = hour;
     }
-    
+
     /** @param new minute value [0-59] */
     public void setMinute(int minute) {
         if (minute < 0 || minute >= MAX_MIN)
             throw new IllegalArgumentException("Not valid minute value");
         this.minute = minute;
     }
-    
+
     /** @param new second value [0-59] */
     public void setSecond(int second) {
         if (second < 0 || second >= MAX_SEC)
@@ -74,7 +74,7 @@ public class Time {
         second = 0;
         return nextMinute();
     }
-    
+
     /** @return instance of class of next minute */
     public Time nextMinute() {
         try {
@@ -86,7 +86,7 @@ public class Time {
         minute = 0;
         return nextHour();
     }
-    
+
     /** @return instance of class of next hour */
     public Time nextHour() {
         try {
@@ -96,7 +96,7 @@ public class Time {
         catch(IllegalArgumentException e) {}
 
         hour = 0;
-        return this;          
+        return this;
     }
 
     /** @return instance of class of previous second */
